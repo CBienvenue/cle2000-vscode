@@ -87,7 +87,7 @@
   "name": "keyword.operator"
 },
 {
-  "match": "\\b(EVALUATE|ECHO|IF|THEN|ELSEIF|ELSE|ENDIF|REPEAT|UNTIL|WHILE|DO|ENDWHILE|QUIT)\\b",
+  "match": "\\b(PROCEDURE|EVALUATE|ECHO|IF|THEN|ELSEIF|ELSE|ENDIF|REPEAT|UNTIL|WHILE|DO|ENDWHILE|QUIT)\\b",
   "name": "keyword.control"
 },
 {
