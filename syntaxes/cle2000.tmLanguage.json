@@ -124,7 +124,7 @@
         "name": "meta.output.cle2000"
       },
       {
-        "match": "(?<=^| )[A-Za-z][A-Za-z0-9\\-]*(?:[+-:])?",
+        "match": "(?<=^| )[A-Za-z][A-Za-z0-9_\\-]*(?:[+-:])?",
         "name": "keyword.other"
       },
       { "include": "$self" }

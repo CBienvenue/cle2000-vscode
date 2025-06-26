@@ -2,7 +2,7 @@
   "name": "cle2000",
   "displayName": "CLE-2000 Language Support",
   "description": "Syntax highlighting for the CLE-2000 language",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "charlesbienvenue",
   "engines": {
     "vscode": "^1.70.0"
