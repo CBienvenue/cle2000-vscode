@@ -101,7 +101,7 @@
 {"include": "#module-block"},
 {
   "match": "\\b(MODULE|LINKED_LIST|XSM_FILE|SEQ_BINARY|SEQ_ASCII)\\b",
-  "name": "storage.type"
+  "name": "keyword.control"
 },
 {
   "match": "[A-Za-z][A-Za-z0-9\\-]*:",
