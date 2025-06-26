@@ -11,8 +11,8 @@
   "name": "invalid.illegal"
 },
 {
-  "match": "^\\*.*$",
-  "name": "comment.line"
+  "match": "^\\s*\\*.*$",
+  "name": "comment.line.cle2000"
 },
 {
   "begin": "!",
