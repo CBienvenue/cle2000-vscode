@@ -1,0 +1,28 @@
+{
+  "name": "cle2000",
+  "displayName": "CLE-2000 Language Support",
+  "description": "Coloration syntaxique pour le langage CLE-2000",
+  "version": "0.0.1",
+  "publisher": "Charles Bienvenue",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "cle2000",
+        "aliases": ["CLE-2000", "cle2000"],
+        "extensions": [".x2m",".c2m"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "cle2000",
+        "scopeName": "source.cle2000",
+        "path": "./syntaxes/cle2000.tmLanguage.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,134 @@
+{
+"scopeName": "source.cle2000",
+"name": "CLE-2000",
+"patterns": [
+{
+  "match": "^.{72}(.+)$",
+  "name": "invalid.illegal"
+},
+{
+  "match": "(?<=.)(?<![ \\t])(;)",
+  "name": "invalid.illegal"
+},
+{
+  "match": "^\\*.*$",
+  "name": "comment.line"
+},
+{
+  "begin": "!",
+  "beginCaptures": {
+    "0": {
+      "name": "comment.line"
+    }
+  },
+  "end": "$",
+  "name": "comment.line"
+},
+{
+  "begin": "\\(\\*",
+  "end": "\\*\\)",
+  "name": "comment.block"
+},
+{
+  "match": ";",
+  "name": "punctuation.terminator"
+},
+{
+  "match": "\\b[+-]?[0-9]+\\b",
+  "name": "constant.numeric"
+},
+{
+  "match": "\\b[+-]?([0-9]*\\.[0-9]+|[0-9]+\\.[0-9]*)([Ee][+-]?[0-9]+)?\\b",
+  "name": "constant.numeric"
+},
+{
+  "match": "\\b[+-]?([0-9]*\\.?[0-9]+|[0-9]+\\.?[0-9]*)([Dd][+-]?[0-9]+)\\b",
+  "name": "constant.numeric"
+},
+{
+  "match": "\"[^\"]{0,72}\"|'[^']{0,72}'",
+  "name": "string.quoted.single"
+},
+{
+  "match": "\\b(TRUE|FALSE|$True_L|$False_L)\\b",
+  "name": "constant.language.boolean"
+},
+{
+  "match": "\\$[_a-zA-Z][_a-zA-Z0-9]{0,11}\\b",
+  "name": "constant.language.boolean"
+},
+{
+  "match": "\\b(DOUBLE|INTEGER|LOGICAL|REAL|STRING)\\b",
+  "name": "keyword.control"
+},
+{
+  "match": ":=",
+  "name": "keyword.operator"
+},
+{
+  "match": "\\b[+-]?(\\d+\\.\\d*|\\.\\d+|\\d+)([eEdD][+-]?\\d+)?\\b",
+  "name": "constant.numeric"
+},
+{
+  "match": "\"[^\"]*\"",
+  "name": "string.quoted.double"
+},
+{
+  "match": "\\b(COS|SIN|TAN|ABS|ARCCOS|ARCSIN|ARCTAN|CHS|EXP|LN|NOT|SQRT)\\b",
+  "name": "keyword.operator",
+  "caseInsensitive": true
+},
+{
+  "match": "[+|-|*|/|**]",
+  "name": "keyword.operator"
+},
+{
+  "match": "(<=|>=|<>|<|>|=)",
+  "name": "keyword.operator"
+},
+{
+  "match": "\\b(EVALUATE|ECHO|IF|THEN|ELSEIF|ELSE|ENDIF|REPEAT|UNTIL|WHILE|DO|ENDWHILE|QUIT)\\b",
+  "name": "keyword.control"
+},
+{
+  "match": "(<<|>>)",
+  "name": "keyword.operator"
+},
+{
+  "match": "\\b(R_TO_I|D_TO_I|I_TO_R|D_TO_R|I_TO_D|R_TO_D)\\b",
+  "name": "keyword.operator"
+},
+{"include": "#module-block"},
+{
+  "match": "\\b(MODULE|LINKED_LIST|XSM_FILE|SEQ_BINARY|SEQ_ASCII)\\b",
+  "name": "storage.type"
+},
+{
+  "match": "[A-Za-z][A-Za-z0-9\\-]*:",
+  "name": "entity.name.function"
+}
+],
+"repository": {
+  "module-block": {
+    "begin": "::",
+    "end": "(?=;)",
+    "patterns": [
+      {
+        "begin": ">>",
+        "end": "<<",
+        "name": "meta.input.cle2000"
+      },
+      {
+        "begin": "<<",
+        "end": ">>",
+        "name": "meta.output.cle2000"
+      },
+      {
+        "match": "(?<=^| )[A-Za-z][A-Za-z0-9\\-]*(?:[+-:])?",
+        "name": "keyword.other"
+      },
+      { "include": "$self" }
+    ]
+  }
+}
+}
