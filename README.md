@@ -5,7 +5,7 @@ This extension provides syntax highlighting and language support for the CLE-200
 
 ## Installation
 
-To install the extension manually:
+To install the extension, it is sufficient to download only the cle2000.vsix file, and install it manually:
 
 ```bash
 code --install-extension cle2000.vsix
