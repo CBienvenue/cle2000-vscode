@@ -1,30 +1,20 @@
 # CLE-2000 Language Support
 
-This extension adds basic syntax highlighting for the CLE-2000 language (.x2m or .c2m) in VSCode.
+This extension provides syntax highlighting and language support for the CLE-2000 programming language (.x2m or .c2m files).
+
 
 ## Installation
 
 To install the extension manually:
 
 ```bash
-    code --install-extension cle2000.vsix
+code --install-extension cle2000.vsix
 ```
 
-## Produce the .vsix file from sources files
+## Producing the `.vsix` File from Source Files
 
-To produce the .vsix file from .json files, run
+To produce the `.vsix` file from the JSON files, run:
 
 ```bash
-    vsce package -o cle2000.vsix
+vsce package -o cle2000.vsix
 ```
-
-To download vsce globally, do
-```bash
-    npm install --global vsce
-```
-or
-```bash
-    brew install vsce
-```
-
-To install npm, go to: https://nodejs.org/.
