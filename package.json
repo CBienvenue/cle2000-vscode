@@ -2,7 +2,7 @@
   "name": "cle2000",
   "displayName": "CLE-2000 Language Support",
   "description": "Syntax highlighting for the CLE-2000 language",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "publisher": "charlesbienvenue",
   "engines": {
     "vscode": "^1.70.0"
@@ -27,6 +27,11 @@
         "scopeName": "source.cle2000",
         "path": "./syntaxes/cle2000.tmLanguage.json"
       }
-    ]
+    ],
+    "configurationDefaults": {
+      "[cle2000]": {
+        "editor.rulers": [72]
+      }
+    }
   }
 }

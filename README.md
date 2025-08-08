@@ -15,12 +15,16 @@ To install the extension manually:
 To produce the .vsix file from .json files, run
 
 ```bash
-    vsce package
+    vsce package -o cle2000.vsix
 ```
 
 To download vsce globally, do
 ```bash
     npm install --global vsce
+```
+or
+```bash
+    brew install vsce
 ```
 
 To install npm, go to: https://nodejs.org/.
