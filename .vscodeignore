@@ -1,0 +1,15 @@
+# Ignore build/test artifacts
+node_modules/**/test/**
+node_modules/**/examples/**
+node_modules/**/docs/**
+test/**
+.vscode/**
+.git/**
+.gitignore
+.vscodeignore
+
+# Ignore config/build files
+tsconfig.json
+*.map
+*.log
+*.vsix
